@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction System for Farmers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #e1e6ec;
+            background-image: url('https://media.istockphoto.com/id/908833482/photo/aerial-view-clouds-over-over-green-agricultural-fields.jpg?s=612x612&w=0&k=20&c=Hr9Z8INVE72xts3BxFhN_q6QlpWHZVTeGRR5nK3Jj8U=');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .footer {
+            color: #fff;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Crop Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Welcome Message -->
+    <div class="container text-center mt-5">
+        <h1 class="animated-welcome">Welcome to Crop Prediction System for Farmers</h1>
+    </div>
+
+    <!-- Input Block -->
+    <div class="container form-section"><br />
+        <h2 class="text-center">Enter Your Soil Details:-</h2> <br />
+        <form action="{{  url_for('predict')  }}" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nitrogen">Nitrogen</label>
+                    <input type="number" class="form-control" name="N" id="nitrogen" placeholder="Enter Nitrogen value">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="pValue">P Value</label>
+                    <input type="number" class="form-control" name="P" id="pValue" placeholder="Enter p value">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="kValue">K Value</label>
+                    <input type="number" class="form-control" name="K" id="kValue" placeholder="Enter K value">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="temperature">Temperature</label>
+                    <input type="text" class="form-control" name="temperature" id="temperature"
+                        placeholder="Enter Temperature">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="humidity">Humidity</label>
+                    <input type="text" class="form-control" name="humidity" id="humidity" placeholder="Enter Humidity">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phValue">PH Value</label>
+                    <input type="text" class="form-control" name="PH" id="phValue" placeholder="Enter pH value">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rainfall">Rainfall</label>
+                    <input type="text" class="form-control" name="rainfall" id="rainfall" placeholder="Enter Rainfall">
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Submit Details</button>
+        </form>
+    </div>
+    <br />
+
+    <footer class="footer text-center">
+        <div class="container">
+            <h3>Thank You</h3>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
