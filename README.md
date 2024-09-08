@@ -1,1 +1,1 @@
-# farmer_project
+# This is a farmer project. This project is based on unsupervised learning. So, basically this model will take some soil information from the user and it will predict or it will suggest some crops that the farmer can grow on that particular soil, based on the clustering analysis performed by the k_means algorithm. So, it is very useful for the farmers as they will get to know that their land is best suited for which crops. Also the data will be stored in MongoDB.
